@@ -2,3 +2,8 @@ extends layout
 
 block content
   h1= title
+  - var results = [{"biryaniType": "Chicken", "biryaniFlavor": "masala", "biryaniPrice": 13}, {"biryaniType": "Mutton", "biryaniFlavor": "dum", "biryaniPrice": 15}, {"biryaniType": "Prawn", "biryaniFlavor": "spicy", "biryaniPrice": 17}]
+    div(class = 'container-fluid')
+      div(class = 'row')
+        each item in results 
+          div(class="col-sm-2") BiryaniType : #{item["biryaniType"]} <br> BiryaniFlavor : #{item["biryaniFlavor"]} <br> BiryaniPrice: #{item["biryaniPrice"]}
